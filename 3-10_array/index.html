@@ -18,6 +18,9 @@
 <main>
 <div class="container">
 <section>
+  <h1>やることリスト</h1>
+  <ul id="list">
+  </ul>
 
 </section>
 </div><!-- /.container -->
@@ -34,7 +37,8 @@
   todo.push('歯医者にいく');
   for (let item of todo) {
     const li = `<li>${item}</li>`
-    console.log(li);
+    //console.log(li);
+    document.getElementById('list').insertAdjacentHTML('beforeend', li);
   }
 </script>
 </body>
