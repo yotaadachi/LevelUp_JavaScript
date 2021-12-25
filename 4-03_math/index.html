@@ -20,6 +20,7 @@
 <section>
  <p>円周率は <span id="pi"></span>です。</p>
  <p>ふつうに切り捨てると<span id="floor"></span>です。</p>
+ <p>小数点第2位で切り捨てると<span id="output"></span>です。</p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -34,6 +35,12 @@
   document.getElementById('pi').textContent = Math.PI;
   document.getElementById('floor').textContent = Math.floor(Math.PI);
 
+  function point(num, digit) {
+    const mover = 10 ** digit;
+    return Math.floor(num * mover) / mover;
+  }
+
+document.getElementById('output').textContent = point(Math.PI, 2);
 </script>
 </body>
 </html>
