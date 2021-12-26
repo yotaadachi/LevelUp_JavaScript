@@ -18,7 +18,7 @@
 <main>
 <div class="container">
 <section>
-
+<p>今から<span id="timer"></span>以内に注文すると50%OFF</p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -50,6 +50,9 @@
   goal.setSeconds(59);
 
   console.log(countdown(goal));
+  const counter = countdown(goal);
+  const timer = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+  document.getElementById('timer').textContent = timer;
 </script>
 </body>
 </html>
