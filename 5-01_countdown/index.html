@@ -20,7 +20,7 @@
 <section>
 <h2><span>知っていました?</span><br>
   2025年大阪万博開催まで</h2>
-<p class="timer">あと<span id="day"></span>日<span id="hour">時間</span><span id="min">  
+<p class="timer">あと<span id="day"></span>日<span id="hour"></span>時間<span id="min">  
 </span>分<span id="sec"></span>秒</p>
 </section>
 </div><!-- /.container -->
@@ -53,8 +53,8 @@
     const counter = countdown(goal);
     document.getElementById('day').textContent = counter[0];
     document.getElementById('hour').textContent = counter[1];
-    document.getElementById('min').textContent = counter[2];
-    document.getElementById('sec').textContent = counter[3];
+    document.getElementById('min').textContent = String(counter[2]).padStart(2, 0);
+    document.getElementById('sec').textContent = String(counter[3]).padStart(2, 0);
     refresh();
   }
 
