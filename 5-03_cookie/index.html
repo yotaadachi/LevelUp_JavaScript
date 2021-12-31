@@ -34,5 +34,19 @@
   </p>
   <button id="agreebtn">承認する</button>
 </div>
+<script src="js.cookie.js"></script>
+<script>
+  'use strict';
+
+  const agree = Cookies.get('cookie-agree');
+  if(agree === 'yes') {
+    console.log('クッキーを確認しました');
+  } else {
+    console.log('クッキーを確認できません');
+    document.getElementById('agreebtn').onclick = function() {
+      Cookies.set('cookie-agree' ,'yes', {expires: 7});
+    }
+  }
+</script>
 </body>
 </html>
