@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>テンプレート</title>
-<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+<link href="images/favicon.ico" rel="shortcut icon">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
-<link href="../../_common/css/style.css" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheets">
 <style>
   .submenu h3 {
     margin: 0 0 lem 0;
@@ -67,8 +67,15 @@
 <p>JavaScript Samples</p>
 </div><!-- /.container -->
 </footer>
-<script src="../../_common/scripts/jquery-3.4.1min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
+  'use strict';
+  
+  $(document).ready(function(){
+    $('.submenu h3').on('click', function(){
+      $(this).next().toggleClass('hidden');
+    });
+  });
   
 </script>
 </body>
