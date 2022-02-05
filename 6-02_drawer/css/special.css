@@ -9,6 +9,20 @@ img {
 }
 
 /* ===== 機能の実装に必要なCSS ===== */
+
+/* ===== ドロワーナビゲーションの必須スタイル ===== */
+#nav {
+    position: fixed;
+    right: -270px;
+    top: 0;
+    width: 270px;
+    height: 100%;
+}
+
+.show {
+    transform: translate3d(-270px, 0, 0);
+}
+
 /* ===== ヘッダーにボタンを配置 ===== */
 .header {
     padding: 16px 0;
@@ -28,8 +42,6 @@ header .container {
     color: #fff;
 }
 /* ===== 装飾的なCSS ===== */
-/* ===== 装飾的なCSS ===== */
-
 /* メニュー */
 #nav {
     padding: 24px 24px 0 24px;
