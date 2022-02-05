@@ -19,8 +19,14 @@ img {
     height: 100%;
 }
 
+/* ドロワーが開かれたときのスタイル */
 .show {
     transform: translate3d(-270px, 0, 0);
+}
+
+/* 開く・閉じるアニメーション */
+#wrapper, #nav {
+    transition: transform 0.3s;
 }
 
 /* ===== ヘッダーにボタンを配置 ===== */

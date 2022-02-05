@@ -64,5 +64,15 @@
     <li><a href="#">問い合わせ</a></li>
   </ul>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  'use strict';
+
+  $(document).ready(function(){
+    $('#open_nav').on('click', function(){
+      $('#wrapper, #nav').toggleClass('show');
+    });
+  });
+</script>
 </body>
 </html>
