@@ -75,5 +75,20 @@
 <p>JavaScript Samples</p>
 </div><!-- /.container -->
 </footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  'use strict';
+
+  $(document).ready(function(){
+    //ファイルの読み込み
+    $.ajax({url: 'data.json', dataType: 'json'})
+    .done(function(data){
+      console.log(data);
+    })
+    .fail(function(){
+      window.alert('読み込みエラー');
+    });
+  });
+</script>
 </body>
 </html>
