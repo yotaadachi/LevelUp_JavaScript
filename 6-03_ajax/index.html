@@ -6,7 +6,7 @@
 <title>テンプレート</title>
 <link href="../../_common/images/favicon.ico" rel="shortcut icon">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
-<link href="../../_common/css/style.css" rel="stylesheet">
+<link href="../_common/css/style.css" rel="stylesheet">
 <style>
   .list {
     overflow: hidden;
@@ -83,10 +83,10 @@
     //ファイルの読み込み
     $.ajax({url: 'data.json', dataType: 'json'})
     .done(function(data){
-      data.foreach(function(item, index){
+      data.forEach(function(item, index){
         console.log(item);
       });
-    });
+    })
     .fail(function(){
       window.alert('読み込みエラー');
     });
