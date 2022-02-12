@@ -18,6 +18,9 @@
 <main>
 <div class="container">
 <section>
+  <p>あなたはいま</p>
+  <p id="loc" class="position"></p>
+  <p>の場所にいます。ちなみに精度は半径<span id="accuracy" class="position"></span>mです。</p>
 
 </section>
 </div><!-- /.container -->
@@ -27,11 +30,17 @@
 <p>JavaScript Samples</p>
 </div><!-- /.container -->
 </footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
   'use strict';
 
   function success(pos) {
-    console.log(pos);
+    const lat = pos.coords.latitude;
+    const lng = pos.coords.longitude;
+    const accuracy = pos.coords.accuracy;
+
+    $('#loc').text(`緯度:${lat} 経度:${lng}`);
+    $('#accuracy').text(accuracy);
   }
 
   function fail(error) {
